@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geeks for Geeks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <header class="header-main">
+        <div class="logosection">
+            <div class="logo-image">
+                <img src="assets/branding/logo.svg" alt="logo">
+            </div>
+            <div class="logo-text">
+                <h1 class="site-title">Geeks for Geeks</h1>
+            </div>
+        </div>
+
+        <nav>
+            <div class="nav-border">
+                <div class="navigation-links">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="#team-detail" class="nav-link scroll-link">Team</a>
+                    <a href="event.html" class="nav-link">Event</a>
+                    <a href="#about-us-section" class="nav-link scroll-link">About us</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                </div>
+                <div class="menu-design" id="menu-icon">
+                    ☰
+                </div>
+            </div>
+
+            <div class="mobile-menu" id="mobile-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="#team-detail" class="nav-link scroll-link">Team</a>
+                <a href="/event" class="nav-link">Event</a>
+                <a href="#about-us-section" class="nav-link scroll-link">About us</a>
+                <a href="/gallery" class="nav-link">Gallery</a>
+            </div>
+        </nav>
+
+        <div class="time-display">
+            <div class="date" id="date"></div>
+            <div class="time" id="time"></div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="circle left" onclick="scrollToSection('whats-new')">
+            <p>What’s New</p>
+        </div>
+        <div class="circle center">
+            <h1>
+                <span>G</span>eeks
+                <span>f</span>or
+                <span>G</span>eeks
+            </h1>
+        </div>
+        <div class="circle right" onclick="scrollToSection('events')">
+            <p>Events</p>
+        </div>
+    </section>
+
+    <section id="about-us-section">
+        <div class="blur-header">
+            <h2><span>A</span>bout <span>U</span>s</h2>
+        </div>
+        <div class="description-wrapper">
+            <p id="description">***</p>
+        </div>
+    </section>
+
+    <section id="team-detail" class="team-carousel-section">
+        <div class="team-carousel-header">
+            <h2>
+                <span>A</span>bout <span>T</span>eam
+            </h2>
+        </div>
+        <div class="team-carousel-container">
+            <div class="team-card-wrapper" id="teamCardContainer"></div>
+            <div class="team-carousel-nav">
+                <button id="prevButton">←</button>
+                <button id="nextButton">→</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="get-in-touch-container">
+        <div class="get-in-touch-title">
+            <h2>
+                <span class="highlight">Get</span> in <span class="highlight">Touch</span>
+            </h2>
+        </div>
+        <div class="icons-container">
+            <a href="https://www.linkedin.com" target="_blank" class="icon-link" data-name="linkedin">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="icon-link" data-name="instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="icon-link" data-name="facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://wa.me/1234567890" target="_blank" class="icon-link" data-name="whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+
+        <div class="footer">
+            &copy; All rights reserved to the GFG-Student-Chapter CGC-Landran.
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.icon-link').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.classList.add('active');
+            });
+
+            link.addEventListener('mouseleave', () => {
+                link.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
