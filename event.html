@@ -5,13 +5,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="event.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="index.js"></script>
 </head>
 
-<body style="background-color: #000;">
-    <h1 style="text-align: center; color:#1f4f22;">Coming Soon</h1>
-    <div style="text-align: center;">
-        <a href="/" style="color:white">Go back</a>
+<body>
+
+    <header class="header-main">
+        <div class="logosection">
+            <div class="logo-image">
+                <img src="assets/branding/logo.svg" alt="logo">
+            </div>
+            <div class="logo-text">
+                <h1 class="site-title">Geeks for Geeks</h1>
+            </div>
+        </div>
+
+        <nav>
+            <div class="nav-border">
+                <div class="navigation-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="#team-detail" class="nav-link scroll-link">Team</a>
+                    <a href="event.html" class="nav-link">Event</a>
+                    <a href="#about-us-section" class="nav-link scroll-link">About us</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                </div>
+                <div class="menu-design" id="menu-icon">
+                    ☰
+                </div>
+            </div>
+
+            <div class="mobile-menu" id="mobile-menu">
+                <a href="/" class="nav-link">Home</a>
+                <a href="#team-detail" class="nav-link scroll-link">Team</a>
+                <a href="/event" class="nav-link">Event</a>
+                <a href="#about-us-section" class="nav-link scroll-link">About us</a>
+                <a href="/gallery" class="nav-link">Gallery</a>
+            </div>
+        </nav>
+
+        <div class="time-display">
+            <div class="date" id="date"></div>
+            <div class="time" id="time"></div>
+        </div>
+    </header>
+
+
+      <!--  belwo header  -->
+        
+        
+      <div class="slideshow-container">
+        <div class="slideshow">
+            <img src="assets/events/event1.jpg" class="slide" alt="Event 1">
+            <img src="assets/events/event2.jpg" class="slide" alt="Event 2">
+            <img src="assets/events/event3.jpg" class="slide" alt="Event 3">
+        </div>
     </div>
+    
+    <div class="live-events-banner-container">
+        <div class="live-events-banner">
+            <span class="live-text">LIVE</span>
+            <span class="live-text-two">Events</span>
+        </div>
+    </div>
+
+    <div class="circle-container">
+        <div class="left-circle"><p>Past Events</p></div>
+        <div class="center-circle"></div>
+        <div class="right-circle"><p>Upcoming Event</p></div>
+    </div>
+    
+    <div class="event-time">
+        <div class="upcoming-event">
+            <h1><span>U</span>pcoming <span>E</span>vent</h1>
+
+            <!-- here we add the upcoming event  and last event  -->
+            <div id="second-page">
+                <div class="slider-container">
+                    <div id="bigCard" class="big-card">
+                        <img id="bigCardImage" src="assets/image/an1.jpg" alt="Big Card Image">
+                        <div class="big-card-info">
+                            <span class="game-name" id="bigCardName">Hogwart</span>
+                            <span class="game-price" id="bigCardPrice">$49.99</span>
+                            <span class="game-discount">25% OFF</span>
+                        </div>
+                    </div>
+        
+                    <div class="small-cards" id="smallCardsContainer">
+                        <!-- Small cards will be added dynamically via JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="past-event">
+            <h1><span>P</span>ast <span>E</span>vent</h1>
+            <div id="third-page">
+                <div class="past-slider-container">
+                    <div id="rightCard" class="right-card">
+                        <img id="rightCardImage" src="image/an1.jpg" alt="Right Card Image">
+                        <div class="right-card-info">
+                            <span class="game-name" id="rightCardName">Hogwart</span>
+                            <span class="game-price" id="rightCardPrice">$49.99</span>
+                            <span class="game-discount">25% OFF</span>
+                        </div>
+                    </div>
+        
+                    <div class="left-cards" id="leftCardsContainer"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<script src="event.js"></script>
+    </script>
 </body>
 
 </html>
